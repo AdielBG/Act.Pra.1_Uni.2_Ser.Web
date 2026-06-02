@@ -6,7 +6,7 @@ namespace Act1_U2_ServiciosWeb.Controllers
     [Route("api/tiempo")]
     public class TiempoController : ControllerBase
     {
-        // GET /api/tiempo/formatear?segundos=3661
+        // GET /api/tiempo/formatear
         [HttpGet("formatear")]
         public IActionResult Formatear([FromQuery] int segundos)
         {
