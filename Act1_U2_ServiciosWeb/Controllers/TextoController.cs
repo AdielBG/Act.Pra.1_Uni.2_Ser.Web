@@ -6,7 +6,7 @@ namespace ApiServiciosWeb.Controllers
     [Route("api/texto")]
     public class TextoController : ControllerBase
     {
-        // GET /api/texto/contar?texto=Hola Mundo
+        // GET /api/texto/contar
         [HttpGet("contar")]
         public IActionResult Contar([FromQuery] string texto)
         {
