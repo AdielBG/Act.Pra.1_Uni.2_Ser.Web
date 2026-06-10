@@ -10,7 +10,7 @@ namespace Act1_U2_ServiciosWeb.Controllers
         [HttpGet("calcular")]
         public IActionResult Calcular([FromQuery] double peso, [FromQuery] double altura)
         {
-            if (peso <= 0 || altura <= 0)
+            if (peso <= 0 || altura <= 0) // Peso: kilogramos (kg) - Altura: metros(m)
             {
                 return BadRequest("El peso y la altura deben ser valores positivos.");
             }

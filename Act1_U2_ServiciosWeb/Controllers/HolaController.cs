@@ -3,12 +3,12 @@
 namespace Act1_U2_ServiciosWeb.Controllers
 {
     [ApiController]
-    [Route("api/hola")]
+    [Route("api/hola")] //Define la ruta base del controlador.
     public class HolaController : ControllerBase
     {
-        // GET /api/hola/saludo?nombre=Adiel
+        // GET /api/hola/saludo
         [HttpGet("saludo")]
-        public IActionResult Saludo([FromQuery] string nombre)
+        public IActionResult Saludo([FromQuery] string nombre) //Toma el valor nombre de la URL
         {
             // Verifica que el nombre no venga vacío
             if (nombre == null || nombre == "")
@@ -16,7 +16,7 @@ namespace Act1_U2_ServiciosWeb.Controllers
                 return BadRequest("Debe ingresar un nombre.");
             }
 
-            // Creamos el mensaje de bienvenida
+            // Crea el mensaje de bienvenida
             string mensaje = "Bienvenido, " + nombre + "! Nos alegra tenerte aquí.";
 
             return Ok(new { mensaje = mensaje });

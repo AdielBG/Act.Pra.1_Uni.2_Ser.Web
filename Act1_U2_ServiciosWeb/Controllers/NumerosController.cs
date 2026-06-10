@@ -66,7 +66,7 @@ namespace   Act1_U2_ServiciosWeb.Controllers
 
             for (int i = 2; i < numero; i++)
             {
-                if (numero % i == 0)
+                if (numero % i == 0) //Lo divide exactamente. Si ninguno lo hace, es primo.
                 {
                     return false;
                 }

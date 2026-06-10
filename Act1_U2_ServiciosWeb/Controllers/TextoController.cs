@@ -16,7 +16,7 @@ namespace ApiServiciosWeb.Controllers
             }
 
             // Contar palabras separando por espacios
-            string[] palabras = texto.Split(' ');
+            string[] palabras = texto.Split(' '); //divide el texto en un arreglo usando el espacio como separador
             int cantidadPalabras = 0;
             foreach (string palabra in palabras)
             {
@@ -49,7 +49,7 @@ namespace ApiServiciosWeb.Controllers
             });
         }
 
-        // GET /api/texto/invertir?texto=Hola
+        // GET /api/texto/invertir
         [HttpGet("invertir")]
         public IActionResult Invertir([FromQuery] string texto)
         {
@@ -60,10 +60,10 @@ namespace ApiServiciosWeb.Controllers
 
             // Invertir el texto carácter por carácter
             string invertido = "";
-            for (int i = texto.Length - 1; i >= 0; i--)
+            for (int i = texto.Length - 1; i >= 0; i--) 
             {
                 invertido = invertido + texto[i];
-            }
+            } //para invertir empieza desde el último índice (Length - 1) y va hacia atrás, concatenando cada letra
 
             return Ok(new
             {

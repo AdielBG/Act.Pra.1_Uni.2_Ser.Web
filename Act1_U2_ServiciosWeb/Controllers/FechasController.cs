@@ -11,7 +11,7 @@ namespace Act1_U2_ServiciosWeb.Controllers
         public IActionResult Diferencia([FromQuery] DateTime desde, [FromQuery] DateTime hasta)
         {
             // Calcular la diferencia entre las dos fechas
-            TimeSpan diferencia = hasta - desde;
+            TimeSpan diferencia = hasta - desde; //restar dos DateTime produce un TimeSpan, que representa una duración.
             int dias = (int)diferencia.TotalDays;
 
             return Ok(new

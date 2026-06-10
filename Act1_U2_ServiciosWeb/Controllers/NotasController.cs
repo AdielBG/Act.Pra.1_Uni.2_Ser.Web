@@ -15,6 +15,7 @@ namespace Act1_U2_ServiciosWeb.Controllers
         // POST /api/notas/estadisticas
         [HttpPost("estadisticas")]
         public IActionResult Estadisticas([FromBody] NotasRequest request)
+        //indica que los datos vienen en el cuerpo de la solicitud, no en la URL
         {
             if (request == null || request.Notas == null || request.Notas.Count == 0)
             {
